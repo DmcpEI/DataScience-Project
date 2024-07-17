@@ -2,11 +2,16 @@
 
 ## Overview
 
-In this project, we embark on a comprehensive exploration of machine learning techniques to extract actionable insights from a given dataset. We traverse through the final stages of the data analytics life-cycle, encompassing model building, evaluation, and comparison.
+In this project, we embark on a comprehensive exploration of machine learning techniques to extract actionable insights from the 2020 CDC survey dataset, which includes various metrics and habits of individuals that can influence heart disease, the primary outcome we aim to predict.
+The project traverses through the complete data analytics life-cycle, encompassing Problem Formulation, Data Analysis and Cleansing, Model Selection, and Evaluation.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Phases of the Project](#phases-of-the-project)
+  - [Problem Formulation](#problem-formulation)
+  - [Data Analysis and Cleansing](#data-analysis-and-cleansing)
+  - [Model Selection](#model-selection)
 - [Algorithms and Techniques](#algorithms-and-techniques)
   - [k-Nearest Neighbors (kNN)](#k-nearest-neighbors-knn)
   - [Supervised Learning](#supervised-learning)
@@ -21,7 +26,26 @@ In this project, we embark on a comprehensive exploration of machine learning te
 
 ## Introduction
 
-This project documents our journey in implementing and evaluating various machine learning algorithms to uncover patterns and insights from a complex dataset. Our goal is to demonstrate the transformative potential of machine learning in data analytics.
+This project documents our journey in implementing and evaluating various machine learning algorithms to uncover patterns and insights from the 2020 CDC survey dataset. Our goal is to demonstrate the transformative potential of machine learning in data analytics.
+
+## Phases of the Project
+
+### Problem Formulation
+
+In the Problem Formulation phase, we articulate a clear definition of the problem addressed by the dataset, outlining the goals and objectives of the ensuing data analysis.
+
+### Data Analysis and Cleansing
+
+In this phase, we delve into pre-processing tasks, describing the dataset’s origins and any preparatory steps undertaken. The report elucidates data cleansing and normalization/standardization processes. Moreover, we navigate through Exploratory Data Analysis (EDA), elucidating descriptive statistics and visualizations employed to comprehend the data. Techniques used include:
+
+- **Descriptive Statistics**: Histograms and correlation analysis.
+- **Dimension Reduction**: Both linear (e.g., PCA) and non-linear (e.g., UMAP) methods.
+
+Initial insights gleaned from EDA are discussed, and hypotheses are formulated for further testing.
+
+### Model Selection
+
+This phase entails feature engineering, generating a minimum of 10 new features, initiating model selection, and evaluating suitable model validation methods, all meticulously justified.
 
 ## Algorithms and Techniques
 
@@ -74,7 +98,7 @@ Through meticulous evaluation and comparison, we delineate the strengths and wea
 
 ## Conclusion
 
-Our project demonstrates the transformative potential of machine learning in extracting actionable insights from data. The findings pave the way for future work in this domain.
+Our project demonstrates the transformative potential of machine learning in extracting actionable insights from the 2020 CDC survey dataset. The findings pave the way for future work in this domain.
 
 ## Future Work
 
@@ -84,3 +108,7 @@ Future work may involve:
 - Further refining feature engineering techniques
 - Applying the models to different datasets
 - Enhancing model interpretability
+
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
