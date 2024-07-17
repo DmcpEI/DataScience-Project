@@ -108,7 +108,3 @@ Future work may involve:
 - Further refining feature engineering techniques
 - Applying the models to different datasets
 - Enhancing model interpretability
-
-1. Clone the repository:
-   ```sh
-   git clone <repository-url>
