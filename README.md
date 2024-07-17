@@ -1,7 +1,5 @@
 # Data-Science-Project
 
-# Machine Learning Project Repository
-
 ## Overview
 
 In this project, we embark on a comprehensive exploration of machine learning techniques to extract actionable insights from a given dataset. We traverse through the final stages of the data analytics life-cycle, encompassing model building, evaluation, and comparison.
