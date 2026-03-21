@@ -1,110 +1,63 @@
-# Data-Science-Project
+# Heart Disease Prediction with Data Science
 
-## Overview
+> A data science project that analyzes the 2020 CDC health survey to predict heart disease and compare statistical, machine learning, ensemble, deep learning, and clustering approaches.
 
-In this project, we embark on a comprehensive exploration of machine learning techniques to extract actionable insights from the 2020 CDC survey dataset, which includes various metrics and habits of individuals that can influence heart disease, the primary outcome we aim to predict.
-The project traverses through the complete data analytics life-cycle, encompassing Problem Formulation, Data Analysis and Cleansing, Model Selection, and Evaluation.
+## 📚 Academic Context
 
-## Table of Contents
+| | |
+|---|---|
+| **Degree** | BSc in Computer Science @ University of Madeira |
+| **Course** | Data Science |
+| **Year** | 2023/24 |
 
-- [Introduction](#introduction)
-- [Phases of the Project](#phases-of-the-project)
-  - [Problem Formulation](#problem-formulation)
-  - [Data Analysis and Cleansing](#data-analysis-and-cleansing)
-  - [Model Selection](#model-selection)
-- [Algorithms and Techniques](#algorithms-and-techniques)
-  - [k-Nearest Neighbors (kNN)](#k-nearest-neighbors-knn)
-  - [Supervised Learning](#supervised-learning)
-  - [Ensemble Models](#ensemble-models)
-  - [Deep Learning](#deep-learning)
-  - [Feature Selection](#feature-selection)
-  - [Clustering Algorithms](#clustering-algorithms)
-- [Implementation Details](#implementation-details)
-- [Evaluation and Comparison](#evaluation-and-comparison)
-- [Conclusion](#conclusion)
-- [Future Work](#future-work)
+## 🛠️ Technologies & Concepts
 
-## Introduction
+- Python
+- pandas, NumPy, SciPy, statsmodels
+- matplotlib and seaborn
+- scikit-learn
+- TensorFlow / Keras
+- UMAP and PCA
+- `imbalanced-learn` resampling
+- `mlxtend` sequential feature selection
+- pickle and joblib model serialization
+- Data preprocessing, encoding, outlier removal, and dataset versioning
+- Exploratory data analysis and hypothesis testing
+- Feature engineering and dimensionality reduction
+- kNN from scratch, Logistic Regression, Decision Tree, and MLP
+- Bagging, AdaBoost, clustering, and deep learning evaluation
 
-This project documents our journey in implementing and evaluating various machine learning algorithms to uncover patterns and insights from the 2020 CDC survey dataset. Our goal is to demonstrate the transformative potential of machine learning in data analytics.
+## 🏗️ Architecture / Approach
 
-## Phases of the Project
+The project is organized around a full end-to-end pipeline in [`projeto/main.py`](./projeto/main.py), supported by exploratory notebooks in [`projeto/notebooks`](./projeto/notebooks). The workflow starts from the raw CDC dataset in [`projeto/data/heart_2020.csv`](./projeto/data/heart_2020.csv), performs categorical encoding, duplicate and outlier removal, hypothesis testing, and feature creation, and then saves intermediate datasets as cleaned and final CSV files.
 
-### Problem Formulation
+The modeling stage splits the data into training, validation, and test sets, applies class rebalancing, and compares multiple approaches: a custom kNN implementation, Logistic Regression, Decision Tree, MLP, Bagging, AdaBoost, a TensorFlow neural model, and clustering methods such as Hierarchical Clustering, K-Means, Gaussian Mixture Models, and OPTICS. The best supervised model is then reused for ensemble learning and sequential backward feature selection.
 
-In the Problem Formulation phase, we articulate a clear definition of the problem addressed by the dataset, outlining the goals and objectives of the ensuing data analysis.
+The repository also includes serialized artifacts such as trained models in [`projeto/models`](./projeto/models), plus [`projeto/builder.pkl`](./projeto/builder.pkl) and [`projeto/feature_selector.pkl`](./projeto/feature_selector.pkl), alongside the project reports that document the mid-project and final phases.
 
-### Data Analysis and Cleansing
+## 🚀 How to Run
 
-In this phase, we delve into pre-processing tasks, describing the dataset’s origins and any preparatory steps undertaken. The report elucidates data cleansing and normalization/standardization processes. Moreover, we navigate through Exploratory Data Analysis (EDA), elucidating descriptive statistics and visualizations employed to comprehend the data. Techniques used include:
+1. Create and activate a Python virtual environment.
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   pip install imbalanced-learn
+   ```
+3. Move into the project directory:
+   ```bash
+   cd projeto
+   ```
+4. Run the main pipeline:
+   ```bash
+   python main.py
+   ```
+5. Optional: open the notebooks in [`projeto/notebooks`](./projeto/notebooks) for the exploratory and modeling workflow in notebook form.
 
-- **Descriptive Statistics**: Histograms and correlation analysis.
-- **Dimension Reduction**: Both linear (e.g., PCA) and non-linear (e.g., UMAP) methods.
+Running the script generates or updates the processed datasets in `projeto/data/`, evaluates the implemented models, produces plots, and writes serialized artifacts such as `builder.pkl` and `feature_selector.pkl`.
 
-Initial insights gleaned from EDA are discussed, and hypotheses are formulated for further testing.
+## 📝 Notes
 
-### Model Selection
-
-This phase entails feature engineering, generating a minimum of 10 new features, initiating model selection, and evaluating suitable model validation methods, all meticulously justified.
-
-## Algorithms and Techniques
-
-### k-Nearest Neighbors (kNN)
-
-- **Implementation**: Crafted from scratch using NumPy arrays.
-- **Purpose**: Serve as a foundational model for understanding basic machine learning concepts.
-- **Evaluation**: Rigorous performance evaluation on the dataset.
-
-### Supervised Learning
-
-- **Library**: Implemented using the sklearn library.
-- **Models**: Tested various models to predict outcomes effectively.
-- **Evaluation**: Scrutinized models for their efficacy in predictive tasks.
-
-### Ensemble Models
-
-- **Techniques**: Incorporated bagging and boosting techniques.
-- **Purpose**: Enhance predictive accuracy of the models.
-
-### Deep Learning
-
-- **Architecture**: Convolutional Neural Network (CNN) implemented using TensorFlow.
-- **Layers**: Comprised multiple layers, including convolutional and pooling layers.
-- **Evaluation**: Trained and evaluated on the dataset, compared with ensemble models for optimal performance.
-
-### Feature Selection
-
-- **Model**: Utilized Decision Tree model for feature selection.
-- **Purpose**: Enhance understanding of relevant features and optimize model performance.
-- **Approach**: Iterative approach to reinforce the importance of feature engineering.
-
-### Clustering Algorithms
-
-- **Techniques**: Applied K-Means, Gaussian Mixture Model (GMM), and Hierarchical Clustering.
-- **Purpose**: Uncover inherent data structures and discern patterns and relationships.
-- **Evaluation**: Adjusted the number of clusters to gain insights into data distribution and potential groupings.
-
-## Implementation Details
-
-The repository contains detailed documentation of the implementation process for each algorithm and technique used. Each section includes:
-
-- Code files and notebooks
-- Documentation and comments within the code
-- Performance evaluation metrics
-
-## Evaluation and Comparison
-
-Through meticulous evaluation and comparison, we delineate the strengths and weaknesses of the implemented models. This analysis offers insights into their practical applicability and guides future endeavors in data analytics.
-
-## Conclusion
-
-Our project demonstrates the transformative potential of machine learning in extracting actionable insights from the 2020 CDC survey dataset. The findings pave the way for future work in this domain.
-
-## Future Work
-
-Future work may involve:
-
-- Exploring additional machine learning algorithms
-- Further refining feature engineering techniques
-- Applying the models to different datasets
-- Enhancing model interpretability
+- The project is documented across three deliverables: [`MidJourneyReport.pdf`](./MidJourneyReport.pdf), [`Final Report.pdf`](./Final%20Report.pdf), and [`Executive Summary.pdf`](./Executive%20Summary.pdf).
+- The dataset used is the 2020 CDC heart disease survey, and the project follows the full data analytics life-cycle from problem formulation to model comparison.
+- The repository already includes generated datasets and saved model artifacts, which makes it possible to inspect both the raw workflow and the resulting outputs.
+- The codebase combines exploratory analysis, statistical testing, feature engineering, supervised learning, ensemble methods, deep learning, and clustering in a single project.
